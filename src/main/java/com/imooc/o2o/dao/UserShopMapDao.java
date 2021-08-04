@@ -1,10 +1,11 @@
 package com.imooc.o2o.dao;
 
 import com.imooc.o2o.entity.UserShopMap;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
+@Mapper
 public interface UserShopMapDao {
 	/**
 	 * 根据查询条件分页返回用户店铺积分列表

@@ -1,7 +1,9 @@
 package com.imooc.o2o.dao;
 
 import com.imooc.o2o.entity.WechatAuth;
+import org.apache.ibatis.annotations.Mapper;
 
+@Mapper
 public interface WechatAuthDao {
 	/**
 	 * 通过openId查询对应本平台的微信帐号

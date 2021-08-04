@@ -1,10 +1,11 @@
 package com.imooc.o2o.dao;
 
 import com.imooc.o2o.entity.ShopAuthMap;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
+@Mapper
 public interface ShopAuthMapDao {
 	/**
 	 * 分页列出店铺下面的授权信息

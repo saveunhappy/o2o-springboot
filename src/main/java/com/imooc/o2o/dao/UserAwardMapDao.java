@@ -1,10 +1,11 @@
 package com.imooc.o2o.dao;
 
 import com.imooc.o2o.entity.UserAwardMap;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
+@Mapper
 public interface UserAwardMapDao {
 	/**
 	 * 根据传入进来的查询条件分页返回用户兑换奖品记录的列表信息

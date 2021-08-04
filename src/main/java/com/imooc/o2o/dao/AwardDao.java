@@ -1,10 +1,11 @@
 package com.imooc.o2o.dao;
 
 import com.imooc.o2o.entity.Award;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
-
+@Mapper
 public interface AwardDao {
 	/**
 	 * 依据传入进来的查询条件分页显示奖品信息列表
