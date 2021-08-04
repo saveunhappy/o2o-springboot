@@ -16,7 +16,7 @@ import java.util.Random;
 
 @Slf4j
 public class ImageUtil {
-    private static final String basePath = Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("")).getPath();
+    private static final String basePath = PathUtil.getImgBasePath();
     private static final SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
     private static final Random r = new Random();
 
@@ -45,6 +45,7 @@ public class ImageUtil {
         //这里就是根据盘符加上相对地址生成的固定文件
         File dest = new File(PathUtil.getImgBasePath() + relativeAddr);
         log.debug("current complete is :" + dest.toString());
+        log.info("basePath = " + basePath);
         try {//这个of里面，能接受File，也能接受inputStream
             Thumbnails.of(thumbnail.getImage()).size(200, 200)
                     .watermark(Positions.BOTTOM_RIGHT, ImageIO.read(new File(basePath + "/watermark.jpg")), 0.25f)
