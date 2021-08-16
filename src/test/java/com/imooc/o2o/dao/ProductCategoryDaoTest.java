@@ -4,6 +4,7 @@ import com.imooc.o2o.entity.ProductCategory;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 
 import java.util.ArrayList;
@@ -11,9 +12,13 @@ import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.*;
 //按照名字的顺序执行，都是test开始的，那么就ABC就行了
+@RunWith(SpringRunner.class)
+@SpringBootTest
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProductCategoryDaoTest {
     @Autowired

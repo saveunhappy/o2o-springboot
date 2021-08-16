@@ -3,6 +3,7 @@ package com.imooc.o2o.dao;
 import com.imooc.o2o.entity.LocalAuth;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 @Mapper
